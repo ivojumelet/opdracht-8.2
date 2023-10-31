@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simpele Rekenmachine</title>
+</head>
+<body>
+  <h1>Simpele Rekenmachine</h1>
+
+  <input type="text" id="num1">
+  <input type="text" id="num2">
+
+  <br><br>
+
+  <button onclick="add()">Optellen</button>
+  <button onclick="subtract()">Aftrekken</button>
+  <button onclick="multiply()">Vermenigvuldigen</button>
+  <button onclick="divide()">Delen</button>
+
+  <br><br>
+
+  <h2>Antwoord: <span id="answer"></span></h2>
+
+  <script>
+    function add() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      if (num1 > 0 && num2 > 0) {
+        document.getElementById("answer").innerHTML = num1 + num2;
+      } else {
+        document.getElementById("answer").innerHTML = "Het getal is te laag";
+      }
+    }
+
+    function subtract() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      if (num1 > 0 && num2 > 0) {
+        document.getElementById("answer").innerHTML = num1 - num2;
+      } else {
+        document.getElementById("answer").innerHTML = "Het getal is te laag";
+      }
+    }
+
+    function multiply() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      if (num1 > 0 && num2 > 0) {
+        document.getElementById("answer").innerHTML = num1 * num2;
+      } else {
+        document.getElementById("answer").innerHTML = "Het getal is te laag";
+      }
+    }
+
+    function divide() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      if (num1 > 0 && num2 > 0) {
+        document.getElementById("answer").innerHTML = num1 / num2;
+      } else {
+        document.getElementById("answer").innerHTML = "Het getal is te laag";
+      }
+    }
+  </script>
+
+</body>
+</html>
